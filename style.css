@@ -121,62 +121,111 @@ a{color:inherit;text-decoration:none}.section{max-width:1180px;margin:auto;paddi
   background: rgba(124,77,255,.18);
 }
 
-/* Image lightbox */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 70px;
-  background: rgba(0,0,0,.90);
-  backdrop-filter: blur(8px);
-}
-.lightbox.is-open { display: flex; }
-.lightbox img {
-  max-width: min(92vw, 1400px);
-  max-height: 86vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 25px 90px rgba(0,0,0,.5);
-}
-.lightbox-close,
-.lightbox-prev,
-.lightbox-next {
-  position: absolute;
-  border: 0;
-  color: white;
-  background: rgba(255,255,255,.10);
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 30px;
-  line-height: 1;
-}
-.lightbox-close { top: 18px; right: 22px; }
-.lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
-.lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
-.lightbox-close:hover,
-.lightbox-prev:hover,
-.lightbox-next:hover { background: rgba(255,255,255,.18); }
-.lightbox p {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  color: rgba(255,255,255,.75);
-  font-size: .85rem;
-  text-align: center;
-}
 @media (max-width: 620px) {
   .evidence-head { padding-right: 0; padding-bottom: 44px; }
   .work-link { left: 0; right: auto; top: 52px; }
   .lightbox { padding: 50px 18px; }
   .lightbox-prev { left: 8px; }
   .lightbox-next { right: 8px; }
+}
+
+
+/* Reliable clickable-image lightbox */
+.evidence-images img {
+  cursor: zoom-in;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 80px;
+  background: rgba(4, 3, 10, .94);
+  backdrop-filter: blur(10px);
+}
+.lightbox.is-open {
+  display: flex;
+}
+.lightbox-stage {
+  max-width: 92vw;
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-stage img {
+  display: block;
+  max-width: 92vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 25px 100px rgba(0,0,0,.65);
+}
+.lightbox-caption {
+  margin-top: 12px;
+  max-width: 85vw;
+  color: rgba(255,255,255,.75);
+  font-size: .86rem;
+  text-align: center;
+}
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 50%;
+  background: rgba(255,255,255,.10);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  transition: transform .2s ease, background .2s ease;
+}
+.lightbox-close { top: 20px; right: 22px; font-size: 30px; }
+.lightbox-prev { left: 22px; top: 50%; transform: translateY(-50%); font-size: 34px; }
+.lightbox-next { right: 22px; top: 50%; transform: translateY(-50%); font-size: 34px; }
+.lightbox-close:hover { transform: scale(1.05); background: rgba(255,255,255,.18); }
+.lightbox-prev:hover { transform: translateY(-50%) scale(1.05); background: rgba(255,255,255,.18); }
+.lightbox-next:hover { transform: translateY(-50%) scale(1.05); background: rgba(255,255,255,.18); }
+
+@media (max-width: 620px) {
+  .lightbox { padding: 60px 18px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-stage img { max-width: 88vw; max-height: 76vh; }
+}
+
+
+/* Final fix: keep each real-work link inside its own card header */
+.evidence-head {
+  position: static !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding-right: 0 !important;
+  flex-wrap: wrap !important;
+}
+.evidence-head > div:not(.work-link) {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+.evidence-head .work-link {
+  position: static !important;
+  margin-left: auto !important;
+  flex: 0 0 auto;
+}
+@media (max-width: 560px) {
+  .evidence-head .work-link {
+    margin-left: 56px !important;
+    margin-top: -6px !important;
+  }
 }
