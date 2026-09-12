@@ -18,3 +18,9 @@
 5. เลือก Branch = `main` และ Folder = `/ (root)`
 6. กด Save
 7. รอสักครู่ แล้วเปิดลิงก์ GitHub Pages ที่ GitHub แสดงให้
+
+
+### เวอร์ชันนี้เพิ่ม
+- ภาพหลักฐานจากไฟล์ PDF 12 ภาพ ใน `assets/evidence/`
+- แสดงผลลัพธ์แบบ Prompt แรก → Prompt ใหม่ ครบทั้ง 6 หัวข้อ
+- ใช้ relative paths จึงนำขึ้น GitHub Pages ได้ทันที
