@@ -96,3 +96,87 @@ a{color:inherit;text-decoration:none}.section{max-width:1180px;margin:auto;paddi
   .evidence-card { padding: 16px; }
   .evidence-images { grid-template-columns: 1fr; }
 }
+
+
+/* Work links */
+.evidence-head { position: relative; padding-right: 150px; }
+.work-link {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(160,120,255,.25);
+  background: rgba(124,77,255,.10);
+  color: inherit;
+  text-decoration: none;
+  font-size: .78rem;
+  transition: transform .2s ease, background .2s ease;
+}
+.work-link:hover {
+  transform: translateY(-2px);
+  background: rgba(124,77,255,.18);
+}
+
+/* Image lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 70px;
+  background: rgba(0,0,0,.90);
+  backdrop-filter: blur(8px);
+}
+.lightbox.is-open { display: flex; }
+.lightbox img {
+  max-width: min(92vw, 1400px);
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 25px 90px rgba(0,0,0,.5);
+}
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  border: 0;
+  color: white;
+  background: rgba(255,255,255,.10);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 1;
+}
+.lightbox-close { top: 18px; right: 22px; }
+.lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover { background: rgba(255,255,255,.18); }
+.lightbox p {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: rgba(255,255,255,.75);
+  font-size: .85rem;
+  text-align: center;
+}
+@media (max-width: 620px) {
+  .evidence-head { padding-right: 0; padding-bottom: 44px; }
+  .work-link { left: 0; right: auto; top: 52px; }
+  .lightbox { padding: 50px 18px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+}
