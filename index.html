@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Learning Portfolio - สรุปการเรียนรู้การใช้งาน AI และเครื่องมือต่าง ๆ">
+  <title>AI Learning Portfolio | Sarah Whitfield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <span class="brand-mark">✦</span>
+      <span>AI Learning<br><small>Portfolio</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="เปิดเมนู">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#home">หน้าหลัก</a>
+      <a href="#learning">การเรียนรู้</a>
+      <a href="#comparison">ผลลัพธ์</a>
+      <a href="#reflection">Reflection</a>
+      <a href="#tools">เครื่องมือ</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero section">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">AI • CREATIVE • PRACTICE</p>
+        <h1>จากคำสั่งสั้น ๆ<br><span>สู่ผลงานที่ชัดเจน</span></h1>
+        <p class="lead">
+          บันทึกการเรียนรู้จากการทดลองใช้ AI เพื่อสร้างภาพ สร้างแผนภาพ
+          เขียนบทความ สร้างสไลด์ และพัฒนาเว็บไซต์จริง
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#learning">ดูผลงานการเรียนรู้</a>
+          <a class="btn ghost" href="#reflection">อ่าน Reflection</a>
+        </div>
+        <div class="mini-stats">
+          <div><strong>06</strong><span>หัวข้อการเรียนรู้</span></div>
+          <div><strong>AI</strong><span>ทดลอง + ปรับ Prompt</span></div>
+          <div><strong>01</strong><span>เว็บไซต์จริง</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-1">
+        <div class="glass-panel">
+          <div class="panel-top"><span>LEARNING JOURNEY</span><span>01—06</span></div>
+          <div class="journey">
+            <div class="journey-line"></div>
+            <div class="journey-item"><span>01</span><b>สร้างรูปด้วย AI</b></div>
+            <div class="journey-item"><span>02</span><b>คณิตศาสตร์ + Desmos</b></div>
+            <div class="journey-item"><span>03</span><b>Diagram + Mermaid</b></div>
+            <div class="journey-item"><span>04</span><b>บทความ + LaTeX</b></div>
+            <div class="journey-item"><span>05</span><b>Slides + NotebookLM</b></div>
+            <div class="journey-item"><span>06</span><b>Website + GitHub</b></div>
+          </div>
+          <div class="panel-footer">PROMPT → ITERATE → IMPROVE → PUBLISH</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro section reveal" id="learning">
+      <div class="section-heading">
+        <p class="eyebrow">01 / OVERVIEW</p>
+        <h2>เส้นทางการเรียนรู้</h2>
+      </div>
+      <p class="section-intro">
+        การเรียนรู้ครั้งนี้เน้นการทดลองจริง โดยเริ่มจาก Prompt เบื้องต้น
+        แล้วเพิ่มรายละเอียดผ่านการถาม-ตอบหรือปรับคำสั่ง จนได้ผลลัพธ์ที่ตรงตามวัตถุประสงค์มากขึ้น
+      </p>
+
+      <div class="learning-grid">
+        <article class="learning-card featured">
+          <span class="number">01</span>
+          <div class="icon">✦</div>
+          <h3>การสร้างรูปด้วย AI</h3>
+          <p>เรียนรู้ว่า Prompt ที่ละเอียดและชัดเจนช่วยให้ AI สร้างภาพที่เฉพาะเจาะจงและตรงกับความต้องการมากขึ้น</p>
+          <span class="tag">Prompt Engineering</span>
+        </article>
+        <article class="learning-card">
+          <span class="number">02</span>
+          <div class="icon">△</div>
+          <h3>คณิตศาสตร์ + Desmos</h3>
+          <p>นำสมการหลายรูปแบบมาประกอบเป็นภาพ และปรับค่าศูนย์กลาง รัศมี ความกว้าง หรือความชันเพื่อควบคุมรูปร่าง</p>
+          <span class="tag">Mathematics</span>
+        </article>
+        <article class="learning-card">
+          <span class="number">03</span>
+          <div class="icon">◇</div>
+          <h3>Diagram + Mermaid</h3>
+          <p>เปลี่ยนข้อมูลที่ซับซ้อนให้เป็นแผนภาพ และเพิ่มรายละเอียดเพื่อสื่อสารความสัมพันธ์ของระบบได้ชัดเจน</p>
+          <span class="tag">Visualization</span>
+        </article>
+        <article class="learning-card">
+          <span class="number">04</span>
+          <div class="icon">⌘</div>
+          <h3>บทความ + LaTeX</h3>
+          <p>สร้างบทความอย่างเป็นระบบ พร้อมปรับโครงสร้าง ตาราง รูปแบบตัวอักษร และการจัดหน้าให้เหมาะกับเอกสาร</p>
+          <span class="tag">Document Design</span>
+        </article>
+        <article class="learning-card">
+          <span class="number">05</span>
+          <div class="icon">✧</div>
+          <h3>Slides + NotebookLM</h3>
+          <p>นำข้อมูลเข้าสู่ NotebookLM เพื่อสรุปสาระสำคัญและจัดโครงสร้างการนำเสนอ ก่อนปรับ Prompt ให้ได้สไลด์ที่เหมาะสม</p>
+          <span class="tag">Presentation</span>
+        </article>
+        <article class="learning-card">
+          <span class="number">06</span>
+          <div class="icon">⌁</div>
+          <h3>Website + GitHub</h3>
+          <p>เขียน HTML, CSS และ JavaScript ปรับดีไซน์เว็บไซต์ และนำไฟล์ขึ้น GitHub เพื่อเผยแพร่ให้เข้าถึงได้จริง</p>
+          <span class="tag">Web Development</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="comparison section" id="comparison">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 / BEFORE → AFTER</p>
+        <h2>ผลลัพธ์เปลี่ยนอย่างไร?</h2>
+      </div>
+      <div class="compare-wrap reveal">
+        <div class="compare-card before">
+          <span class="compare-label">PROMPT แรก</span>
+          <h3>คำสั่งสั้น / ข้อมูลกว้าง</h3>
+          <p>เหมาะสำหรับการเริ่มต้นและดูแนวทาง แต่ผลลัพธ์อาจยังไม่เฉพาะเจาะจง</p>
+          <div class="example">“บ้านเดี่ยวสองชั้นสำหรับครอบครัวที่เลี้ยงสัตว์”</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="compare-card after">
+          <span class="compare-label">PROMPT ใหม่</span>
+          <h3>รายละเอียดชัด / ตรงเป้าหมาย</h3>
+          <p>เพิ่มข้อมูลเรื่องผู้อยู่อาศัย ห้อง สไตล์ พื้นที่ และงบประมาณ ทำให้ผลลัพธ์ตรงความต้องการมากขึ้น</p>
+          <div class="example">โมเดิร์นมินิมอล • 3 ห้องนอน • สวน • พื้นที่สำหรับแมว</div>
+        </div>
+      </div>
+      <div class="principle reveal">
+        <span>KEY PRINCIPLE</span>
+        <strong>รายละเอียดของ Prompt ↑ &nbsp; → &nbsp; ความตรงตามวัตถุประสงค์ ↑</strong>
+      </div>
+    </section>
+
+    <section class="reflection section" id="reflection">
+      <div class="reflection-inner reveal">
+        <div>
+          <p class="eyebrow">03 / REFLECTION</p>
+          <h2>สิ่งที่ได้เรียนรู้<br><span>จากการลงมือทำจริง</span></h2>
+        </div>
+        <div class="reflection-copy">
+          <p>
+            การใช้ AI ไม่ใช่เพียงการสั่งให้ระบบสร้างผลงานแล้วนำไปใช้ทันที
+            แต่เป็นกระบวนการทดลอง ตรวจสอบ วิเคราะห์ และปรับคำสั่งหลายครั้ง
+            เพื่อให้ได้ผลลัพธ์ที่ตรงตามวัตถุประสงค์
+          </p>
+          <p>
+            สิ่งสำคัญที่ได้เรียนรู้คือ <b>คุณภาพของผลลัพธ์ขึ้นอยู่กับความชัดเจน
+            ของคำสั่งและข้อมูลที่นำมาใช้</b> เมื่อเพิ่มรายละเอียดและกำหนดเป้าหมายให้ชัดเจน
+            ผลงานก็มีความเฉพาะเจาะจงและสื่อสารได้ดีขึ้น
+          </p>
+          <p>
+            นอกจากนี้ยังได้ฝึกการนำ AI ไปประยุกต์กับงานหลายรูปแบบ ตั้งแต่ภาพ
+            คณิตศาสตร์ แผนภาพ เอกสาร สไลด์ ไปจนถึงเว็บไซต์ที่สามารถเผยแพร่ได้จริง
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools section" id="tools">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 / TOOLKIT</p>
+        <h2>เครื่องมือที่ได้ทดลองใช้</h2>
+      </div>
+      <div class="tool-grid reveal">
+        <div class="tool"><span>✦</span><h3>AI Image</h3><p>สร้างและปรับปรุงภาพจาก Prompt</p></div>
+        <div class="tool"><span>◉</span><h3>Desmos</h3><p>สร้างภาพจากสมการคณิตศาสตร์</p></div>
+        <div class="tool"><span>◇</span><h3>Mermaid</h3><p>สร้าง Diagram จาก Code</p></div>
+        <div class="tool"><span>⌘</span><h3>Overleaf</h3><p>สร้างบทความด้วย LaTeX</p></div>
+        <div class="tool"><span>✧</span><h3>NotebookLM</h3><p>สรุปข้อมูลและสร้าง Slides</p></div>
+        <div class="tool"><span>◌</span><h3>GitHub</h3><p>จัดเก็บและเผยแพร่เว็บไซต์</p></div>
+      </div>
+    </section>
+
+    <section class="quote section reveal">
+      <div class="quote-mark">“</div>
+      <blockquote>AI ให้คำตอบได้ดีขึ้น เมื่อเรารู้ว่า<br><span>ต้องการถามอะไรอย่างชัดเจน</span></blockquote>
+      <p>LEARN • TEST • REFINE • CREATE</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>AI Learning Portfolio</strong>
+      <span>บันทึกการเรียนรู้จากการทดลองใช้ AI</span>
+    </div>
+    <span>© 2026 Sarah Whitfield</span>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="กลับขึ้นด้านบน">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
